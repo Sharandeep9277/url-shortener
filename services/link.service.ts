@@ -39,6 +39,15 @@ export async function createShortLink({
     });
   }
 
+  // const existingOriginalUrl = await prisma.shortLink.findFirst({
+  //   where:{
+  //     originalUrl,
+  //   },
+  //   orderBy:{
+  //     createdAt: "asc",
+  //   }
+  // })
+
   // Check existing URL
   const existingLink = await prisma.shortLink.findFirst({
     where: {

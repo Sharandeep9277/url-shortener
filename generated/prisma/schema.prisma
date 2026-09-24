@@ -10,7 +10,7 @@ datasource db {
 model ShortLink {
   id          String    @id @default(cuid())
   code        String    @unique
-  originalUrl String
+  originalUrl String    @unique
   clickCount  Int       @default(0)
   expiresAt   DateTime?
   createdAt   DateTime  @default(now())

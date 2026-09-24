@@ -2095,15 +2095,15 @@ export namespace Prisma {
   export type ShortLinkWhereUniqueInput = Prisma.AtLeast<{
     id?: string
     code?: string
+    originalUrl?: string
     AND?: ShortLinkWhereInput | ShortLinkWhereInput[]
     OR?: ShortLinkWhereInput[]
     NOT?: ShortLinkWhereInput | ShortLinkWhereInput[]
-    originalUrl?: StringFilter<"ShortLink"> | string
     clickCount?: IntFilter<"ShortLink"> | number
     expiresAt?: DateTimeNullableFilter<"ShortLink"> | Date | string | null
     createdAt?: DateTimeFilter<"ShortLink"> | Date | string
     updatedAt?: DateTimeFilter<"ShortLink"> | Date | string
-  }, "id" | "code">
+  }, "id" | "code" | "originalUrl">
 
   export type ShortLinkOrderByWithAggregationInput = {
     id?: SortOrder
